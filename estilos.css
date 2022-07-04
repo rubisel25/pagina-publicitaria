@@ -1,0 +1,326 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background: #e67817 ;
+    color: #ffffff;
+    background-color: #e67817;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='Artboard-5' fill='%23030303' fill-opacity='0.5' fill-rule='nonzero'%3E%3Cpath d='M6 18h12V6H6v12zM4 4h16v16H4V4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+}
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+/* Navegación */
+.nav-main{
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 20px 0;
+}
+/* #region */
+.nav-brand{
+    width: 50px;
+}
+/* Nav lef */
+.nav-main ul {
+    display: flex;
+}
+.nav-main ul li {
+    padding: 130px;
+}
+.nav-main ul li a{
+    padding: 10px;
+}
+.nav-main ul li a:hover{
+    border-bottom: 4px solid #ffffff;
+}
+.nav-main ul.nav-menu{
+    flex: 1px;
+    margin-left: 20px;
+}
+.menu-btn{
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 30px;
+    z-index: 2;
+    display: none;
+    border-bottom: 4px solid #ffffff;
+}
+/* Showcase*/
+hr{
+    margin: 10px 0;
+    border: none;
+    height: 5px; /* Set the hr color */ 
+    color: #ffffff; /* old IE */
+    background-color: #ffffff; /* Modern Browsers */ 
+
+}
+.showcase{
+    width: 100%;
+    height: 550px;
+    background: url('img/fondo\ principal.jpg') no-repeat center;
+    color:#ffffff ;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+    border-radius: 30%;
+}
+.showcase h2{
+    font-size: 30px;
+    color: #ffffff;
+}
+.showcase p {
+    font-size: 20px;
+}
+.showcase .cuadrado{
+    background: #262626;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #262626;
+    color: white;
+    font-size: 25px;
+    border: 5px solid #ffffff;
+    margin: 10px 0;
+}
+.btn :hover{
+    opacity: .7;
+}
+.showcase h2{
+    margin-bottom: 10px;
+}
+.showcase p{
+    font-size: 30px;
+}
+/* Curriculum */
+.titulo{
+    background: #BBDEFB;
+    color: black;
+    height: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.cur{
+    width: 800px;
+    height: 600px;
+    padding: 20px 50px 600px 0;
+}
+.cu {
+    border-radius: 20px;
+    position: absolute;
+    left: 380px;
+}
+/* Propyesta */
+.Propuestas img{
+    margin: 10px 15px;
+    float: left;
+    width: 550px;
+    height: 550px;
+    margin-bottom: auto;
+    margin: 20px;
+}
+
+/* News Cards */
+.news-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 40px 0;
+    gap: 25px;
+}
+.news-cards img{    
+    width: 100%;
+    height: 200px;
+}
+.news-cards h3{
+    font-size: 25px;
+    margin: 10px 0;
+
+}
+.news-cards p{
+    font-size: 18px;
+}
+.news-cards a {
+    padding: 10px 0;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+}
+.news-cards a:hover{
+    text-decoration: underline;
+}
+/* banner*/
+.cards-banner-one{
+    width: 100%;
+    height: 600px;
+    background: url(img/equipo.jpg);
+    margin-bottom: 10px;
+    color: black;
+}
+.cards-banner-one .content{
+    background: #262626;
+    width: 80%;
+    padding: 10px 0 0 30px;
+    position: relative;
+    color: #ffffff;
+    left: 150px;
+    text-align: justify;
+}
+.cards-banner-one p,
+.cards-banner-one h2
+{
+    margin: 10px 10 20px 0;
+}
+@media (max-width: 700px){
+
+    .menu-btn{
+        display: block;
+    }
+    .nav-main ul.nav-menu{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #2f3640;
+        width: 50%;
+        height: 100%;
+        padding: 30px;
+        opacity: .9;
+        transform: translateX(-400px);
+        transition: transform 0.5s ease-in-out;
+    }
+    .nav-main ul.nav-menu.show{
+        transform: translateX(-20px);
+    }
+    .nav-main ul.nav-menu li{
+        padding: 20px;
+        font-size: 14px;
+    }
+    .nav-main ul.nav-menu-right{
+        margin-right: 40px;
+    }
+    .showcase{
+        border-radius: 0%;
+    }
+    .news-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards-banner-one{
+        width: 100%;
+        height: 400px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        align-items: center;
+        transition: all 500ms ease-out;
+    }
+    .cards-banner-one .content{
+        width: 100%;
+        height: 300px;
+        padding: 20px;
+        left: 0;
+        cursor: pointer;
+        transition: all 500ms ease-out;
+        opacity: 0;
+    }
+    .cards-banner-one .content:hover{
+        opacity: 1;
+    }
+    .cur{
+        width: 500px;
+        position: -ms-page;
+        left: 200px;
+        padding: 25px;
+    }
+    .cu{
+        left: 25px;
+        position: unset;
+    }
+    .fin{
+        position: absolute;
+        bottom: -280px;
+    }
+}
+@media (max-width: 500px){
+    .showcase{
+        background-size: contain;
+        border-radius: 0;
+        margin-bottom: 2px;
+    }
+    .news-cards{
+        grid-template-columns: 1fr;
+        width: 500px;
+        margin: auto;
+        padding-top: 0px;
+        padding-bottom: 15px;
+    }
+    .news-cards img{
+        width: 450px;
+        height: auto;
+    }
+    .news-cards p{
+        width: 450px;
+        text-align: justify;        
+    }
+    .cards-banner-one{
+        padding: 0px;
+        height: auto;
+    }
+    .cards-banner-one .content{
+        width: 100%;
+        padding: 40px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        bottom: 30x;
+    }
+    .cop{
+        padding-top: 10px;
+    }
+    .cur{
+        width: 450px;
+        height: 400px;
+        padding: 1px;
+    }
+    .cu{
+        width: 450px;
+        height: 440px;
+        padding: 0px;
+    }
+    .fin{
+        bottom: -100px;
+    }
+    .titulo img{
+        width: 450px;
+        height: auto;
+        margin: 0;
+        padding: 10px 0;
+    }
+}
